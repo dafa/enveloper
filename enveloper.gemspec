@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["dafanya@gmail.com"]
   s.homepage    = "https://github.com/dafa/enveloper"
   s.summary     = "Enveloper allows you to see how your site looks at small window sizes without resizing the browser window"
-  s.description = "TODO: Description of Enveloper."
+  s.description = "Enveloper allows you to see how your site looks at small window sizes without resizing the browser window"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
