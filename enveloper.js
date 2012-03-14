@@ -149,8 +149,6 @@ EnvelopeResizer.prototype = {
     // if the worst comes to the worst popup window with suitable size
     openNewWindow: function() {
         var url = this.frame.attr("src");
-        if(url[0] == '/'){
-        }
         window.open(url,'Enveloped for you','width='+this.envelope.width()+',height='+this.envelope.height())
     }
 }
