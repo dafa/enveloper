@@ -95,7 +95,6 @@ EnvelopeResizer.prototype = {
 
     // link in frame clicked
     onIframeLoad: function (ev) {
-        console.log(ev);
         window.clearTimeout(this.load_timer);
         this.hideIframeError();
         try{
