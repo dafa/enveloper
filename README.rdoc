@@ -11,3 +11,6 @@ Mount engine in routes.rb of your progect. Like
 Then go to /enveloper and type the url you'd like to see in the address bar as a hash. As a fallback "open in new window" button rises new window of selected size.
 
 It uses jquery cookie plugin ( https://github.com/carhartl/jquery-cookie ) to keep selected size.
+
+Also enveloper could be used as a set of static files. You can take them from gh-pages branch of this project.
+You can test the script at http://dafa.github.com/enveloper/.
