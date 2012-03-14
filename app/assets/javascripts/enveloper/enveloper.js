@@ -16,8 +16,8 @@ var EnvelopeResizer = function(){
 
 EnvelopeResizer.prototype = {
     initialize: function(){
-        var h = parseInt($.cookie('height')) || 480;
-        var w  = parseInt($.cookie('width'))  || 320;
+        var h = parseInt($.cookie('envelope-height')) || 480;
+        var w  = parseInt($.cookie('envelope-width'))  || 320;
         this.height = $('#height')[0];
         this.width  = $('#width')[0];
         this.envelope = $('#envelope');
@@ -41,8 +41,8 @@ EnvelopeResizer.prototype = {
 
     // partial actions
     setCookies: function(w, h){
-        $.cookie('height', parseInt(h));
-        $.cookie('width',  parseInt(w));
+        $.cookie('envelope-height', parseInt(h));
+        $.cookie('envelope-width',  parseInt(w));
     },
     setInputs: function(w, h){
         this.width.value = w;
@@ -124,7 +124,7 @@ EnvelopeResizer.prototype = {
     onHashChanged: function() {
         var hash = window.location.hash.replace(/^#/, '');
         if(!hash || hash == ""){
-            hash = "info.html"
+            hash = window.location.pathname+"/info.html"
         }
         if(hash && hash!=this.frame.attr("src")){
             window.clearTimeout(this.load_timer);
@@ -149,8 +149,6 @@ EnvelopeResizer.prototype = {
     // if the worst comes to the worst popup window with suitable size
     openNewWindow: function() {
         var url = this.frame.attr("src");
-        if(url[0] == '/'){
-        }
         window.open(url,'Enveloped for you','width='+this.envelope.width()+',height='+this.envelope.height())
     }
 }

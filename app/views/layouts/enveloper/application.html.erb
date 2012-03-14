@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Enveloped for you</title>
+	<meta name="description" content="There's something inside :o)">
+	<meta name="author" content="Dafa">
+
+
+        <%= stylesheet_link_tag    "enveloper/application", :media => "all" %>
+        <%= javascript_include_tag "enveloper/application" %>
+        <%= csrf_meta_tags %>
+        <script src="http://yandex.st/jquery/cookie/1.0/jquery.cookie.min.js" type="text/javascript"></script>
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="shortcut icon" href="assets/enveloper/envelope.png">
+</head>
+<body>
+  <%= yield %>
+</body>
+</html>

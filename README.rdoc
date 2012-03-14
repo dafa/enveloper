@@ -1,0 +1,13 @@
+= Enveloper
+
+This project rocks and uses MIT-LICENSE.
+A small engine that allows you to see how your site looks at small window sizes without resizing the browser window.
+
+= Usage
+
+Mount engine in routes.rb of your progect. Like
+    mount Enveloper::Engine => "/enveloper"
+
+Then go to /enveloper and type the url you'd like to see in the address bar as a hash. As a fallback "open in new window" button rises new window of selected size.
+
+It uses jquery cookie plugin ( https://github.com/carhartl/jquery-cookie ) to keep selected size.
