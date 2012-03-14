@@ -95,7 +95,6 @@ EnvelopeResizer.prototype = {
 
     // link in frame clicked
     onIframeLoad: function (ev) {
-        console.log(ev);
         window.clearTimeout(this.load_timer);
         this.hideIframeError();
         try{
@@ -124,7 +123,11 @@ EnvelopeResizer.prototype = {
     onHashChanged: function() {
         var hash = window.location.hash.replace(/^#/, '');
         if(!hash || hash == ""){
-            hash = window.location.pathname+"/info.html"
+            var path = window.location.pathname;
+            if(path[path.length-1] == "/") { 
+                path = path.substr(0, path.length-1);
+            }
+            hash = path+"/info.html"
         }
         if(hash && hash!=this.frame.attr("src")){
             window.clearTimeout(this.load_timer);
